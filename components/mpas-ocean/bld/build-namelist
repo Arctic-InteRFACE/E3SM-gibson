@@ -1010,6 +1010,37 @@ if ($ice_bgc eq 'ice_bgc' ) {
         add_default($nl, 'config_use_ecosysTracers_sea_ice_coupling', 'val'=>".false.");
 }
 
+############################################# 
+# Namelist group: tracer_forcing_benthosTracers #
+#############################################
+
+if ($ocn_bgc eq 'eco_only' || $ocn_bgc eq 'eco_and_dms' || $ocn_bgc eq 'eco_and_macromolecules' || $ocn_bgc eq 'eco_and_dms_and_macromolecules' ) {
+        add_default($nl, 'config_use_benthosTracers', 'val'=>".true.");
+} else {
+        add_default($nl, 'config_use_benthosTracers', 'val'=>".false.");
+}
+add_default($nl, 'config_use_benthosTracers_sea_ice_coupling');
+add_default($nl, 'config_set_benthos_flags');
+add_default($nl, 'config_use_carbonate_saturation');
+add_default($nl, 'config_use_secondary_reactions');
+add_default($nl, 'config_use_depth_dependent_porosity');
+add_default($nl, 'config_use_non_zero_diffusivity');
+add_default($nl, 'config_use_sedimentation');
+add_default($nl, 'config_use_positive_sedimentation');
+add_default($nl, 'config_use_fast_sedimentation');
+add_default($nl, 'config_use_bgc_sinking_flux');
+add_default($nl, 'config_use_step_initial_profiles');
+add_default($nl, 'config_use_benthic_reactions');
+add_default($nl, 'config_use_flux_correction');
+add_default($nl, 'config_use_ocean_conc');
+add_default($nl, 'config_use_deep_source');
+add_default($nl, 'config_use_constant_diffusivity');
+add_default($nl, 'config_benthosTracers_diagnostic_fields_level1');
+add_default($nl, 'config_benthosTracers_diagnostic_fields_level2');
+add_default($nl, 'config_benthosTracers_diagnostic_fields_level3');
+add_default($nl, 'config_benthosTracers_diagnostic_fields_level4');
+add_default($nl, 'config_benthosTracers_diagnostic_fields_level5');
+
 #############################################
 # Namelist group: tracer_forcing_DMSTracers #
 #############################################
@@ -1634,6 +1665,7 @@ my @groups = qw(run_modes
                 tracer_forcing_debugtracers
                 tracer_forcing_ecosystracers
                 tracer_forcing_dmstracers
+                tracer_forcing_benthostracers
                 tracer_forcing_macromoleculestracers
                 am_globalstats
                 am_surfaceareaweightedaverages
