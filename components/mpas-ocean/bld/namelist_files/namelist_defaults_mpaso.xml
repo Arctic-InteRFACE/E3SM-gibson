@@ -541,6 +541,7 @@
 
 <!-- tracer_forcing_benthosTracers -->
 <config_use_benthosTracers>.false.</config_use_benthosTracers>
+<config_do_restart_benthos>.false.</config_do_restart_benthos>
 <config_use_benthosTracers_sea_ice_coupling>.false.</config_use_benthosTracers_sea_ice_coupling>
 <config_set_benthos_flags>0</config_set_benthos_flags>
 <config_use_carbonate_saturation>.true.</config_use_carbonate_saturation>

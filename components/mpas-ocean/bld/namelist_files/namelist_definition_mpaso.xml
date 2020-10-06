@@ -2528,6 +2528,14 @@ Valid values: .true. or .false.
 Default: Defined in namelist_defaults.xml
 </entry>
 
+<entry id="config_do_restart_benthos" type="logical"
+        category="tracer_forcing_benthosTracers" group="tracer_forcing_benthosTracers">
+if true, use restart file
+                                                                    
+Valid values: .true. or .false.
+Default: Defined in namelist_defaults.xml
+</entry>
+
 <entry id="config_use_benthosTracers_sea_ice_coupling" type="logical"
         category="tracer_forcing_benthosTracers" group="tracer_forcing_benthosTracers">
 if true, couple benthos fields with sea ice

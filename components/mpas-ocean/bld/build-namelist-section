@@ -498,6 +498,7 @@ add_default($nl, 'config_ecosysTracers_diagnostic_fields_level5');
 ################################################
 
 add_default($nl, 'config_use_benthosTracers');
+add_default($nl, 'config_do_restart_benthos');
 add_default($nl, 'config_use_benthosTracers_sea_ice_coupling');
 add_default($nl, 'config_set_benthos_flags');
 add_default($nl, 'config_use_carbonate_saturation');
