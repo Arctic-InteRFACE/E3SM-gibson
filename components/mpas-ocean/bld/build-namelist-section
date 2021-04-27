@@ -515,6 +515,8 @@ add_default($nl, 'config_use_flux_correction');
 add_default($nl, 'config_use_ocean_conc');
 add_default($nl, 'config_use_deep_source');
 add_default($nl, 'config_use_constant_diffusivity');
+add_default($nl, 'config_use_ocean_bottom_state');
+add_default($nl, 'config_use_benthos_monthly_forcing');
 add_default($nl, 'config_benthosTracers_diagnostic_fields_level1');
 add_default($nl, 'config_benthosTracers_diagnostic_fields_level2');
 add_default($nl, 'config_benthosTracers_diagnostic_fields_level3');

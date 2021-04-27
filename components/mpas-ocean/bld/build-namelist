@@ -1014,11 +1014,7 @@ if ($ice_bgc eq 'ice_bgc' ) {
 # Namelist group: tracer_forcing_benthosTracers #
 #############################################
 
-if ($ocn_bgc eq 'eco_only' || $ocn_bgc eq 'eco_and_dms' || $ocn_bgc eq 'eco_and_macromolecules' || $ocn_bgc eq 'eco_and_dms_and_macromolecules' ) {
-        add_default($nl, 'config_use_benthosTracers', 'val'=>".true.");
-} else {
-        add_default($nl, 'config_use_benthosTracers', 'val'=>".false.");
-}
+add_default($nl, 'config_use_benthosTracers');
 add_default($nl, 'config_do_restart_benthos');
 add_default($nl, 'config_use_benthosTracers_sea_ice_coupling');
 add_default($nl, 'config_set_benthos_flags');
@@ -1036,6 +1032,8 @@ add_default($nl, 'config_use_flux_correction');
 add_default($nl, 'config_use_ocean_conc');
 add_default($nl, 'config_use_deep_source');
 add_default($nl, 'config_use_constant_diffusivity');
+add_default($nl, 'config_use_ocean_bottom_state');
+add_default($nl, 'config_use_benthos_monthly_forcing');
 add_default($nl, 'config_benthosTracers_diagnostic_fields_level1');
 add_default($nl, 'config_benthosTracers_diagnostic_fields_level2');
 add_default($nl, 'config_benthosTracers_diagnostic_fields_level3');

@@ -2664,6 +2664,22 @@ Valid values: .true. or .false.
 Default: Defined in namelist_defaults.xml
 </entry>
 
+<entry id="config_use_ocean_bottom_state" type="logical"
+        category="tracer_forcing_benthosTracers" group="tracer_forcing_benthosTracers">
+if true, use the ocean ecosys model to force the benthos
+                                                                 
+Valid values: .true. or .false.
+Default: Defined in namelist_defaults.xml
+</entry>
+
+<entry id="config_use_benthos_monthly_forcing" type="logical"
+        category="tracer_forcing_benthosTracers" group="tracer_forcing_benthosTracers">
+if true, use monthly data file of ocean fluxes and concentrations
+                                                                 
+Valid values: .true. or .false.
+Default: Defined in namelist_defaults.xml
+</entry>
+
 <entry id="config_benthosTracers_diagnostic_fields_level1" type="logical"
         category="tracer_forcing_benthosTracers" group="tracer_forcing_benthosTracers">
 if true, make variables in benthosDiagFieldsLevel1 available for output
