@@ -703,13 +703,12 @@ contains
 
     ! read initial data required for benthos forcing
     call mpas_pool_get_config(domain % configs, 'config_use_benthosTracers', config_use_benthosTracers)
-    if (config_use_benthosTracers) then
-       call mpas_pool_get_config(domain % configs, 'config_use_benthos_monthly_forcing)', config_use_benthos_monthly_forcing)
-       if (config_use_benthos_monthly_forcing) then
-          call mpas_timer_start('io_benthos',.false.)
-          call ocn_get_benthos_data(domain_ptr % streamManager, domain, domain % clock, .true.)
-          call mpas_timer_stop('io_benthos')
-       endif
+    call mpas_pool_get_config(domain % configs, 'config_use_benthos_monthly_forcing', config_use_benthos_monthly_forcing)
+
+    if (config_use_benthosTracers .and. config_use_benthos_monthly_forcing) then
+        call mpas_timer_start('io_benthos',.false.)
+        call ocn_get_benthos_data(domain_ptr % streamManager, domain, domain % clock, .true.)
+        call mpas_timer_stop('io_benthos')
     endif
 
     ! read initial data required for monthly surface salinity restoring
@@ -1003,13 +1002,11 @@ contains
 
         ! read next time level  data required for benthos forcing
         call mpas_pool_get_config(domain % configs, 'config_use_benthosTracers', config_use_benthosTracers)
-        if (config_use_benthosTracers) then
-           call mpas_pool_get_config(domain % configs, 'config_use_benthos_monthly_forcing)', config_use_benthos_monthly_forcing)
-           if (config_use_benthos_monthly_forcing) then
-              call mpas_timer_start('io_benthos',.false.)
-              call ocn_get_benthos_data(domain_ptr % streamManager, domain, domain % clock, .false.)
-              call mpas_timer_stop('io_benthos')
-           endif
+        call mpas_pool_get_config(domain % configs, 'config_use_benthos_monthly_forcing', config_use_benthos_monthly_forcing)
+        if (config_use_benthosTracers .and. config_use_benthos_monthly_forcing) then
+           call mpas_timer_start('io_benthos',.false.)
+           call ocn_get_benthos_data(domain_ptr % streamManager, domain, domain % clock, .false.)
+           call mpas_timer_stop('io_benthos')
         endif
 
          ! read next time level data required for monthly surface salinity restoring
